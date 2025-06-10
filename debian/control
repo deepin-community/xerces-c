@@ -17,8 +17,8 @@ Vcs-Git: https://salsa.debian.org/bblough/xerces-c.git
 Homepage: https://xerces.apache.org/xerces-c/
 
 
-Package: libxerces-c3.2t64
-Provides: ${t64:Provides}
+Package: libxerces-c3.2
+Provides: ${Provides}
 Replaces: libxerces-c3.2
 Breaks: libxerces-c3.2 (<< ${source:Version})
 Architecture: any
@@ -43,7 +43,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libc6-dev | libc-dev,
          libicu-dev,
-         libxerces-c3.2t64 (= ${binary:Version}),
+         libxerces-c3.2 (= ${binary:Version}),
          ${misc:Depends}
 Conflicts: libxerces-c2-dev,
            libxerces25-dev,
