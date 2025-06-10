@@ -1,23 +1,26 @@
 Source: xerces-c
 Section: libs
 Priority: optional
-Build-Depends: debhelper-compat(=12),
+Build-Depends: dpkg-dev (>= 1.22.5), debhelper-compat(=12),
                libcurl4-gnutls-dev,
                libicu-dev
 Build-Depends-Indep: doxygen,
-                     default-jre-headless | default-jre,
+                     default-jre,
                      libatk-wrapper-java,
                      libstylebook-java,
                      libxalan2-java,
                      libxerces2-java
-Maintainer: Deepin Developer <deepin-dev@deepin.org>
-Standards-Version: 4.5.1
-#Vcs-Browser
-#Vcs-Git
+Maintainer: William Blough <bblough@debian.org>
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/bblough/xerces-c
+Vcs-Git: https://salsa.debian.org/bblough/xerces-c.git
 Homepage: https://xerces.apache.org/xerces-c/
 
 
-Package: libxerces-c3.2
+Package: libxerces-c3.2t64
+Provides: ${t64:Provides}
+Replaces: libxerces-c3.2
+Breaks: libxerces-c3.2 (<< ${source:Version})
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
@@ -40,7 +43,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libc6-dev | libc-dev,
          libicu-dev,
-         libxerces-c3.2 (= ${binary:Version}),
+         libxerces-c3.2t64 (= ${binary:Version}),
          ${misc:Depends}
 Conflicts: libxerces-c2-dev,
            libxerces25-dev,
