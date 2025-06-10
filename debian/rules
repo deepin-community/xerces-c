@@ -15,7 +15,7 @@ override_dh_auto_configure:
 override_dh_compress:
 	dh_compress -plibxerces-c-dev -Xexamples
 	dh_compress -plibxerces-c-doc -Xhtml
-	dh_compress -plibxerces-c3.2
+	dh_compress -plibxerces-c3.2t64
 	dh_compress -plibxerces-c-samples
 
 override_dh_installexamples:
